@@ -1,3 +1,4 @@
+/*
 resource "aws_route53_zone" "main" {
   name = "heimpoint.com"
 
@@ -26,3 +27,4 @@ resource "aws_acm_certificate" "main" {
     create_before_destroy = true
   }
 }
+*/

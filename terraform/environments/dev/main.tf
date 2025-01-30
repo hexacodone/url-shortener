@@ -1,5 +1,5 @@
 module "vpc" {
-  source = "../modules/vpc"
+  source = "../../modules/vpc"
 
   project_name = var.project_name
   environment  = var.environment
@@ -7,7 +7,7 @@ module "vpc" {
 }
 
 module "ec2" {
-  source = "../modules/ec2"
+  source = "../../modules/ec2"
 
   project_name = var.project_name
   environment  = var.environment
