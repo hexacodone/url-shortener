@@ -1,0 +1,42 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: db-backup
+  namespace: url-shortener
+spec:
+  schedule: "0 2 * * *"  # Um 2 Uhr morgens
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: backup
+            image: postgres:14
+            command:
+            - /bin/sh
+            - -c
+            - |
+              pg_dump -h ${DB_HOST} -U ${DB_USER} -d ${DB_NAME} | gzip > /backup/db-$(date +%Y%m%d).sql.gz
+              aws s3 cp /backup/db-$(date +%Y%m%d).sql.gz s3://${BACKUP_BUCKET}/
+            env:
+            - name: DB_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: db-credentials
+                  key: host
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: db-credentials
+                  key: username
+            - name: DB_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: db-credentials
+                  key: database
+            - name: PGPASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: db-credentials
+                  key: password
+          restartPolicy: OnFailure
