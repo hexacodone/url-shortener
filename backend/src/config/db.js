@@ -9,24 +9,24 @@ const connection = {
   password: process.env.DB_PASSWORD,
 }
 
-const db = pgp(connection)
-
-module.exports = db
-
-// src/config/logger.js
-const winston = require('winston')
-
-const logger = winston.createLogger({
-  level: 'info',
-  format: winston.format.combine(
-    winston.format.timestamp(),
-    winston.format.json()
-  ),
-  transports: [
-    new winston.transports.Console(),
-    new winston.transports.File({ filename: 'error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'combined.log' })
-  ]
+console.log('Database connection config:', {
+  host: connection.host,
+  port: connection.port,
+  database: connection.database,
+  user: connection.user,
+  // password ausgelassen aus Sicherheitsgründen
 })
 
-module.exports = logger
+const db = pgp(connection)
+
+// Test der Verbindung
+db.connect()
+  .then(obj => {
+    console.log('Database connection successful')
+    obj.done() // success, release the connection
+  })
+  .catch(error => {
+    console.log('ERROR:', error.message || error)
+  })
+
+module.exports = db

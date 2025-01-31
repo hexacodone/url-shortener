@@ -68,3 +68,5 @@ const urlController = {
     }
   }
 }
+
+module.exports = urlController

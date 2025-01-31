@@ -1,0 +1,23 @@
+{"level":"info","message":"Server is running on port 8080","timestamp":"2025-01-31T00:18:05.375Z"}
+{"level":"info","message":"Server is running on port 8080","timestamp":"2025-01-31T00:24:57.025Z"}
+{"level":"info","message":"Server is running on port 8080","timestamp":"2025-01-31T00:27:20.692Z"}
+{"level":"info","message":"Server is running on port 8080","timestamp":"2025-01-31T00:30:50.238Z"}
+{"level":"info","message":"Server is running on port 8080","timestamp":"2025-01-31T00:33:28.500Z"}
+{"level":"info","message":"Server is running on port 8080","timestamp":"2025-01-31T00:36:19.805Z"}
+{"level":"info","message":"Server is running on port 8080","timestamp":"2025-01-31T00:49:43.854Z"}
+{"level":"info","message":"POST /api/urls","timestamp":"2025-01-31T00:50:05.594Z"}
+{"level":"error","message":"Error creating short URL: db.one is not a function","stack":"TypeError: db.one is not a function\n    at Object.create (/app/src/models/url.js:12:15)\n    at createShortUrl (/app/src/controllers/urlController.js:21:39)\n    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)\n    at next (/app/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/app/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)\n    at /app/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/app/node_modules/express/lib/router/index.js:346:12)\n    at next (/app/node_modules/express/lib/router/index.js:280:10)\n    at Function.handle (/app/node_modules/express/lib/router/index.js:175:3)","timestamp":"2025-01-31T00:50:05.596Z"}
+{"level":"info","message":"POST /api/urls","timestamp":"2025-01-31T00:50:15.572Z"}
+{"level":"error","message":"Error creating short URL: db.one is not a function","stack":"TypeError: db.one is not a function\n    at Object.create (/app/src/models/url.js:12:15)\n    at createShortUrl (/app/src/controllers/urlController.js:21:39)\n    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)\n    at next (/app/node_modules/express/lib/router/route.js:149:13)\n    at Route.dispatch (/app/node_modules/express/lib/router/route.js:119:3)\n    at Layer.handle [as handle_request] (/app/node_modules/express/lib/router/layer.js:95:5)\n    at /app/node_modules/express/lib/router/index.js:284:15\n    at Function.process_params (/app/node_modules/express/lib/router/index.js:346:12)\n    at next (/app/node_modules/express/lib/router/index.js:280:10)\n    at Function.handle (/app/node_modules/express/lib/router/index.js:175:3)","timestamp":"2025-01-31T00:50:15.572Z"}
+{"level":"info","message":"Server is running on port 8080","timestamp":"2025-01-31T00:54:38.709Z"}
+{"level":"info","message":"POST /api/urls","timestamp":"2025-01-31T00:54:51.163Z"}
+{"level":"info","message":"POST /api/urls","timestamp":"2025-01-31T00:55:11.395Z"}
+{"level":"info","message":"Server is running on port 8080","timestamp":"2025-01-31T00:59:50.027Z"}
+{"level":"info","message":"POST /api/urls","timestamp":"2025-01-31T00:59:59.276Z"}
+{"level":"info","message":"GET /f5bf6a6f","timestamp":"2025-01-31T01:00:03.191Z"}
+{"level":"info","message":"POST /api/urls","timestamp":"2025-01-31T01:09:51.607Z"}
+{"level":"info","message":"POST /api/urls","timestamp":"2025-01-31T01:09:53.968Z"}
+{"level":"info","message":"POST /api/urls","timestamp":"2025-01-31T01:09:55.917Z"}
+{"level":"info","message":"POST /api/urls","timestamp":"2025-01-31T01:09:58.572Z"}
+{"level":"info","message":"POST /api/urls","timestamp":"2025-01-31T01:13:20.459Z"}
+{"level":"info","message":"GET /638acbe4","timestamp":"2025-01-31T01:13:22.439Z"}
